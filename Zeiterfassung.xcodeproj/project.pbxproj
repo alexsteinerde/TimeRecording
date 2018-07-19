@@ -21,7 +21,6 @@
 		FA3A74F12100B1E500F11457 /* ContinueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A74F02100B1E500F11457 /* ContinueButtonView.swift */; };
 		FA3A74F32100B41000F11457 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A74F22100B41000F11457 /* Extensions.swift */; };
 		FA3A74F62100B52C00F11457 /* TimeRecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A74F42100B52C00F11457 /* TimeRecordingViewController.swift */; };
-		FA3A74F72100B52C00F11457 /* TimeRecordingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3A74F52100B52C00F11457 /* TimeRecordingViewController.xib */; };
 		FA3A74F92100B62B00F11457 /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A74F82100B62B00F11457 /* StopwatchView.swift */; };
 		FA3A74FB2100B63400F11457 /* StopwatchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3A74FA2100B63400F11457 /* StopwatchView.xib */; };
 /* End PBXBuildFile section */
@@ -43,7 +42,6 @@
 		FA3A74F02100B1E500F11457 /* ContinueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButtonView.swift; sourceTree = "<group>"; };
 		FA3A74F22100B41000F11457 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FA3A74F42100B52C00F11457 /* TimeRecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRecordingViewController.swift; sourceTree = "<group>"; };
-		FA3A74F52100B52C00F11457 /* TimeRecordingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeRecordingViewController.xib; sourceTree = "<group>"; };
 		FA3A74F82100B62B00F11457 /* StopwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchView.swift; sourceTree = "<group>"; };
 		FA3A74FA2100B63400F11457 /* StopwatchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StopwatchView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				FA3A74F42100B52C00F11457 /* TimeRecordingViewController.swift */,
-				FA3A74F52100B52C00F11457 /* TimeRecordingViewController.xib */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -202,7 +199,6 @@
 				FA3A74FB2100B63400F11457 /* StopwatchView.xib in Resources */,
 				FA283F6D20F8D7BB009BF7EC /* Assets.xcassets in Resources */,
 				FA283F7720F8D98A009BF7EC /* MonthSelectionView.xib in Resources */,
-				FA3A74F72100B52C00F11457 /* TimeRecordingViewController.xib in Resources */,
 				FA3A74EB2100B1C200F11457 /* PauseAndStopButtonView.xib in Resources */,
 				FA3A74ED2100B1CC00F11457 /* ContinueButtonView.xib in Resources */,
 				FA3A74E92100B18500F11457 /* StartButtonView.xib in Resources */,
