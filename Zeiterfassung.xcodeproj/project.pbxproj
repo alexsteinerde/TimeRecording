@@ -13,6 +13,13 @@
 		FA283F6D20F8D7BB009BF7EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA283F6C20F8D7BB009BF7EC /* Assets.xcassets */; };
 		FA283F7520F8D981009BF7EC /* MonthSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA283F7420F8D981009BF7EC /* MonthSelectionView.swift */; };
 		FA283F7720F8D98A009BF7EC /* MonthSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA283F7620F8D98A009BF7EC /* MonthSelectionView.xib */; };
+		FA3A74E72100B16600F11457 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A74E62100B16600F11457 /* StartButtonView.swift */; };
+		FA3A74E92100B18500F11457 /* StartButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3A74E82100B18500F11457 /* StartButtonView.xib */; };
+		FA3A74EB2100B1C200F11457 /* PauseAndStopButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3A74EA2100B1C200F11457 /* PauseAndStopButtonView.xib */; };
+		FA3A74ED2100B1CC00F11457 /* ContinueButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3A74EC2100B1CC00F11457 /* ContinueButtonView.xib */; };
+		FA3A74EF2100B1DE00F11457 /* PauseAndStopButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A74EE2100B1DE00F11457 /* PauseAndStopButtonView.swift */; };
+		FA3A74F12100B1E500F11457 /* ContinueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A74F02100B1E500F11457 /* ContinueButtonView.swift */; };
+		FA3A74F32100B41000F11457 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A74F22100B41000F11457 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		FA283F6C20F8D7BB009BF7EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA283F7420F8D981009BF7EC /* MonthSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSelectionView.swift; sourceTree = "<group>"; };
 		FA283F7620F8D98A009BF7EC /* MonthSelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonthSelectionView.xib; sourceTree = "<group>"; };
+		FA3A74E62100B16600F11457 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
+		FA3A74E82100B18500F11457 /* StartButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartButtonView.xib; sourceTree = "<group>"; };
+		FA3A74EA2100B1C200F11457 /* PauseAndStopButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PauseAndStopButtonView.xib; sourceTree = "<group>"; };
+		FA3A74EC2100B1CC00F11457 /* ContinueButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContinueButtonView.xib; sourceTree = "<group>"; };
+		FA3A74EE2100B1DE00F11457 /* PauseAndStopButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseAndStopButtonView.swift; sourceTree = "<group>"; };
+		FA3A74F02100B1E500F11457 /* ContinueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButtonView.swift; sourceTree = "<group>"; };
+		FA3A74F22100B41000F11457 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +86,7 @@
 				FA283F6220F8D76B009BF7EC /* LaunchScreen.storyboard */,
 				FA283F6C20F8D7BB009BF7EC /* Assets.xcassets */,
 				FA283F6520F8D76B009BF7EC /* Info.plist */,
+				FA3A74F22100B41000F11457 /* Extensions.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -93,10 +108,24 @@
 		FA283F7320F8D951009BF7EC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA3A74E52100B13D00F11457 /* Buttons */,
 				FA283F7420F8D981009BF7EC /* MonthSelectionView.swift */,
 				FA283F7620F8D98A009BF7EC /* MonthSelectionView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FA3A74E52100B13D00F11457 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				FA3A74E62100B16600F11457 /* StartButtonView.swift */,
+				FA3A74E82100B18500F11457 /* StartButtonView.xib */,
+				FA3A74EE2100B1DE00F11457 /* PauseAndStopButtonView.swift */,
+				FA3A74EA2100B1C200F11457 /* PauseAndStopButtonView.xib */,
+				FA3A74F02100B1E500F11457 /* ContinueButtonView.swift */,
+				FA3A74EC2100B1CC00F11457 /* ContinueButtonView.xib */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +189,9 @@
 				FA283F6420F8D76B009BF7EC /* LaunchScreen.storyboard in Resources */,
 				FA283F6D20F8D7BB009BF7EC /* Assets.xcassets in Resources */,
 				FA283F7720F8D98A009BF7EC /* MonthSelectionView.xib in Resources */,
+				FA3A74EB2100B1C200F11457 /* PauseAndStopButtonView.xib in Resources */,
+				FA3A74ED2100B1CC00F11457 /* ContinueButtonView.xib in Resources */,
+				FA3A74E92100B18500F11457 /* StartButtonView.xib in Resources */,
 				FA283F5F20F8D76A009BF7EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,8 +203,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3A74E72100B16600F11457 /* StartButtonView.swift in Sources */,
+				FA3A74F32100B41000F11457 /* Extensions.swift in Sources */,
+				FA3A74EF2100B1DE00F11457 /* PauseAndStopButtonView.swift in Sources */,
 				FA283F7520F8D981009BF7EC /* MonthSelectionView.swift in Sources */,
 				FA283F5A20F8D76A009BF7EC /* AppDelegate.swift in Sources */,
+				FA3A74F12100B1E500F11457 /* ContinueButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
