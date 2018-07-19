@@ -10,6 +10,12 @@ import UIKit
 
 class TimeRecordingViewController: UIViewController {
 
+    enum State {
+        case start
+        case running
+        case pause
+    }
     
+    private var state: State = .start
 
 }
