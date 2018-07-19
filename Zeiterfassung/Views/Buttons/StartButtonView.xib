@@ -13,10 +13,23 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="StartButtonView" customModule="Zeiterfassung" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="277"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7t-Nf-XNM">
+                    <rect key="frame" x="142.5" y="106.5" width="90" height="63"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="42"/>
+                    <state key="normal" title="Start"/>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="N7t-Nf-XNM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="LpH-4H-ebo"/>
+                <constraint firstItem="N7t-Nf-XNM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Wrs-xn-IS6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="39.5" y="-141.5"/>
         </view>
     </objects>
 </document>
