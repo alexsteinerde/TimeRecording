@@ -10,12 +10,23 @@ import UIKit
 
 class StopwatchView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet private weak var timeLabel: UILabel!
+    
+    
+    private var seconds: Int = 0 {
+        didSet {
+            guard oldValue != seconds else { return }
+            timeLabel.text = StopwatchView.textForLabel(fromSeconds: seconds)
+        }
     }
-    */
-
+    
+    static func textForLabel(fromSeconds totalSeconds: Int) -> String {
+        let hours = Int(totalSeconds / 3600)
+        var remainder = Int(totalSeconds - hours * 3600)
+        let minutes = Int(remainder / 60)
+        remainder = Int(remainder - minutes * 60)
+        let seconds = remainder
+        
+        return String(format: "%02d:%02d:%02d", hours,minutes,seconds)
+    }
 }

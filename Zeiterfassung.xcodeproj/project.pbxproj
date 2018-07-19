@@ -23,7 +23,18 @@
 		FA3A74F62100B52C00F11457 /* TimeRecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A74F42100B52C00F11457 /* TimeRecordingViewController.swift */; };
 		FA3A74F92100B62B00F11457 /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A74F82100B62B00F11457 /* StopwatchView.swift */; };
 		FA3A74FB2100B63400F11457 /* StopwatchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3A74FA2100B63400F11457 /* StopwatchView.xib */; };
+		FA3A75032100D3DA00F11457 /* ZeiterfassungTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A75022100D3DA00F11457 /* ZeiterfassungTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA3A75052100D3DA00F11457 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA283F4E20F8D76A009BF7EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA283F5520F8D76A009BF7EC;
+			remoteInfo = Zeiterfassung;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FA283F5620F8D76A009BF7EC /* Zeiterfassung.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zeiterfassung.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,10 +55,20 @@
 		FA3A74F42100B52C00F11457 /* TimeRecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRecordingViewController.swift; sourceTree = "<group>"; };
 		FA3A74F82100B62B00F11457 /* StopwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchView.swift; sourceTree = "<group>"; };
 		FA3A74FA2100B63400F11457 /* StopwatchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StopwatchView.xib; sourceTree = "<group>"; };
+		FA3A75002100D3DA00F11457 /* ZeiterfassungTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeiterfassungTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA3A75022100D3DA00F11457 /* ZeiterfassungTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeiterfassungTests.swift; sourceTree = "<group>"; };
+		FA3A75042100D3DA00F11457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FA283F5320F8D76A009BF7EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA3A74FD2100D3DA00F11457 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -61,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				FA283F5820F8D76A009BF7EC /* Zeiterfassung */,
+				FA3A75012100D3DA00F11457 /* ZeiterfassungTests */,
 				FA283F5720F8D76A009BF7EC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				FA283F5620F8D76A009BF7EC /* Zeiterfassung.app */,
+				FA3A75002100D3DA00F11457 /* ZeiterfassungTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +160,15 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		FA3A75012100D3DA00F11457 /* ZeiterfassungTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA3A75022100D3DA00F11457 /* ZeiterfassungTests.swift */,
+				FA3A75042100D3DA00F11457 /* Info.plist */,
+			);
+			path = ZeiterfassungTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,6 +189,24 @@
 			productReference = FA283F5620F8D76A009BF7EC /* Zeiterfassung.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FA3A74FF2100D3DA00F11457 /* ZeiterfassungTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA3A75072100D3DA00F11457 /* Build configuration list for PBXNativeTarget "ZeiterfassungTests" */;
+			buildPhases = (
+				FA3A74FC2100D3DA00F11457 /* Sources */,
+				FA3A74FD2100D3DA00F11457 /* Frameworks */,
+				FA3A74FE2100D3DA00F11457 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA3A75062100D3DA00F11457 /* PBXTargetDependency */,
+			);
+			name = ZeiterfassungTests;
+			productName = ZeiterfassungTests;
+			productReference = FA3A75002100D3DA00F11457 /* ZeiterfassungTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -169,6 +219,10 @@
 				TargetAttributes = {
 					FA283F5520F8D76A009BF7EC = {
 						CreatedOnToolsVersion = 9.4.1;
+					};
+					FA3A74FF2100D3DA00F11457 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = FA283F5520F8D76A009BF7EC;
 					};
 				};
 			};
@@ -186,6 +240,7 @@
 			projectRoot = "";
 			targets = (
 				FA283F5520F8D76A009BF7EC /* Zeiterfassung */,
+				FA3A74FF2100D3DA00F11457 /* ZeiterfassungTests */,
 			);
 		};
 /* End PBXProject section */
@@ -203,6 +258,13 @@
 				FA3A74ED2100B1CC00F11457 /* ContinueButtonView.xib in Resources */,
 				FA3A74E92100B18500F11457 /* StartButtonView.xib in Resources */,
 				FA283F5F20F8D76A009BF7EC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA3A74FE2100D3DA00F11457 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +286,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA3A74FC2100D3DA00F11457 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA3A75032100D3DA00F11457 /* ZeiterfassungTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA3A75062100D3DA00F11457 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA283F5520F8D76A009BF7EC /* Zeiterfassung */;
+			targetProxy = FA3A75052100D3DA00F11457 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FA283F5D20F8D76A009BF7EC /* Main.storyboard */ = {
@@ -396,6 +474,48 @@
 			};
 			name = Release;
 		};
+		FA3A75082100D3DA00F11457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DZYTXHVP4K;
+				INFOPLIST_FILE = ZeiterfassungTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.alexsteiner.ZeiterfassungTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zeiterfassung.app/Zeiterfassung";
+			};
+			name = Debug;
+		};
+		FA3A75092100D3DA00F11457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DZYTXHVP4K;
+				INFOPLIST_FILE = ZeiterfassungTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.alexsteiner.ZeiterfassungTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zeiterfassung.app/Zeiterfassung";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -413,6 +533,15 @@
 			buildConfigurations = (
 				FA283F6920F8D76B009BF7EC /* Debug */,
 				FA283F6A20F8D76B009BF7EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA3A75072100D3DA00F11457 /* Build configuration list for PBXNativeTarget "ZeiterfassungTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA3A75082100D3DA00F11457 /* Debug */,
+				FA3A75092100D3DA00F11457 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
