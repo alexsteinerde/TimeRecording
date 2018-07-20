@@ -24,6 +24,7 @@
 		FA3A74F92100B62B00F11457 /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A74F82100B62B00F11457 /* StopwatchView.swift */; };
 		FA3A74FB2100B63400F11457 /* StopwatchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3A74FA2100B63400F11457 /* StopwatchView.xib */; };
 		FA3A75032100D3DA00F11457 /* ZeiterfassungTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A75022100D3DA00F11457 /* ZeiterfassungTests.swift */; };
+		FA3A750B2101DD9C00F11457 /* TimeRecordingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A750A2101DD9C00F11457 /* TimeRecordingButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		FA3A75002100D3DA00F11457 /* ZeiterfassungTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeiterfassungTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3A75022100D3DA00F11457 /* ZeiterfassungTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeiterfassungTests.swift; sourceTree = "<group>"; };
 		FA3A75042100D3DA00F11457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA3A750A2101DD9C00F11457 /* TimeRecordingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRecordingButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		FA3A74E52100B13D00F11457 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				FA3A750A2101DD9C00F11457 /* TimeRecordingButtonView.swift */,
 				FA3A74E62100B16600F11457 /* StartButtonView.swift */,
 				FA3A74E82100B18500F11457 /* StartButtonView.xib */,
 				FA3A74EE2100B1DE00F11457 /* PauseAndStopButtonView.swift */,
@@ -282,6 +285,7 @@
 				FA283F7520F8D981009BF7EC /* MonthSelectionView.swift in Sources */,
 				FA283F5A20F8D76A009BF7EC /* AppDelegate.swift in Sources */,
 				FA3A74F92100B62B00F11457 /* StopwatchView.swift in Sources */,
+				FA3A750B2101DD9C00F11457 /* TimeRecordingButtonView.swift in Sources */,
 				FA3A74F12100B1E500F11457 /* ContinueButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

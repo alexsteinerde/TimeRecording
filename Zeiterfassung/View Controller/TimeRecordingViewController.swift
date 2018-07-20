@@ -15,7 +15,7 @@ class TimeRecordingViewController: UIViewController {
         case running
         case pause
         
-        var view: UIView.Type {
+        var view: TimeRecordingButtonView.Type {
             switch self {
             case .start:
                 return StartButtonView.self
@@ -31,12 +31,14 @@ class TimeRecordingViewController: UIViewController {
     
     private var state: States = (.start, nil)
     private weak var currentStateView: UIView?
+    private weak var stopwatchView: StopwatchView?
     
     private func view(forState: State) -> UIView {
         let frame = CGRect(x: 0, y: view.frame.height/3*1, width: view.frame.width, height: view.frame.height/3*2)
         
         let viewType = state.current.view
-        let stateView = viewType.instanceFromNib()
+        let stateView = viewType.instanceFromNib() as! TimeRecordingButtonView
+        stateView.delegate = self
         stateView.frame = frame
         return stateView
     }
@@ -51,13 +53,37 @@ class TimeRecordingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         replace(oldStateWith: state.current)
-        view.addSubview(stopwatchView())
+        let stopwatchView = createStopwatchView()
+        self.stopwatchView = stopwatchView
+        view.addSubview(stopwatchView)
     }
     
-    private func stopwatchView() -> UIView {
-        let stopwatch = StopwatchView.instanceFromNib()
+    private func createStopwatchView() -> StopwatchView {
+        let stopwatch = StopwatchView.instanceFromNib() as! StopwatchView
         let frame = CGRect(x: 0, y: 64, width: view.frame.width, height: view.frame.height/3-64)
         stopwatch.frame = frame
         return stopwatch
+    }
+}
+
+extension TimeRecordingViewController: StartTimeRecordingDelegate {
+    func startTimeRecording() {
+        
+    }
+}
+
+extension TimeRecordingViewController: PauseAndStopTimeRecordingDelegate {
+    func pauseTimeRecording() {
+        
+    }
+    
+    func stopTimeRecording() {
+        
+    }
+}
+
+extension TimeRecordingViewController: ContinueTimeRecordingDelegate {
+    func continueTimeRecording() {
+        
     }
 }

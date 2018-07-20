@@ -8,15 +8,13 @@
 
 import UIKit
 
-class ContinueButtonView: UIView {
-
-    weak var delegate: ContinueTimeRecordingProtocol?
+class ContinueButtonView: TimeRecordingButtonView {
 
     @IBAction func `continue`(_ sender: Any) {
-        delegate?.continueTimeRecording()
+        (delegate as? ContinueTimeRecordingDelegate)?.continueTimeRecording()
     }
 }
 
-protocol ContinueTimeRecordingProtocol: class {
+protocol ContinueTimeRecordingDelegate: Delegate {
     func continueTimeRecording()
 }

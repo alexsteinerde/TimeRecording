@@ -8,15 +8,13 @@
 
 import UIKit
 
-class StartButtonView: UIView {
-
-    weak var delegate: StartTimeRecordingDelegate?
+class StartButtonView: TimeRecordingButtonView {
 
     @IBAction func start(_ sender: Any) {
-        delegate?.startTimeRecording()
+        (delegate as? StartTimeRecordingDelegate)?.startTimeRecording()
     }
 }
 
-protocol StartTimeRecordingDelegate: class {
+protocol StartTimeRecordingDelegate: Delegate {
     func startTimeRecording()
 }

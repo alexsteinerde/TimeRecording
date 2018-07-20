@@ -8,20 +8,19 @@
 
 import UIKit
 
-class PauseAndStopButtonView: UIView {
+class PauseAndStopButtonView: TimeRecordingButtonView {
 
-    weak var delegate: PauseAndStopTimeRecordingDelegate?
 
     @IBAction func pause(_ sender: Any) {
-        delegate?.pauseTimeRecording()
+        (delegate as? PauseAndStopTimeRecordingDelegate)?.pauseTimeRecording()
     }
     
     @IBAction func stop(_ sender: Any) {
-        delegate?.stopTimeRecording()
+        (delegate as? PauseAndStopTimeRecordingDelegate)?.stopTimeRecording()
     }
 }
 
-protocol PauseAndStopTimeRecordingDelegate: class {
+protocol PauseAndStopTimeRecordingDelegate: Delegate {
     func pauseTimeRecording()
     func stopTimeRecording()
 }
