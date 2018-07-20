@@ -41,7 +41,7 @@ class TimeRecordingViewController: UIViewController {
         return stateView
     }
     
-    func replace(oldStateWith newState: State) {
+    private func replace(oldStateWith newState: State) {
         let newStateView = view(forState: newState)
         self.view.addSubview(newStateView)
         currentStateView?.removeFromSuperview()
@@ -51,5 +51,13 @@ class TimeRecordingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         replace(oldStateWith: state.current)
+        view.addSubview(stopwatchView())
+    }
+    
+    private func stopwatchView() -> UIView {
+        let stopwatch = StopwatchView.instanceFromNib()
+        let frame = CGRect(x: 0, y: 64, width: view.frame.width, height: view.frame.height/3-64)
+        stopwatch.frame = frame
+        return stopwatch
     }
 }
