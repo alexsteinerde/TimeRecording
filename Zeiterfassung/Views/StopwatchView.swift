@@ -13,7 +13,7 @@ class StopwatchView: UIView {
     @IBOutlet private weak var timeLabel: UILabel!
     
     
-    private var seconds: Int = 0 {
+    var seconds: Int = 0 {
         didSet {
             guard oldValue != seconds else { return }
             timeLabel.text = StopwatchView.textForLabel(fromSeconds: seconds)
