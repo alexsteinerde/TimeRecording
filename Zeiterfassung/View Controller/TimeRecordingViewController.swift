@@ -27,11 +27,16 @@ class TimeRecordingViewController: UIViewController {
         }
     }
     
+    private var currentSeconds = 0
+    private var savedSeconds = 0
+    private var startDate = Date()
+    
     typealias States = (current: State, old: State?)
     
     private var state: States = (.start, nil)
     private weak var currentStateView: UIView?
     private weak var stopwatchView: StopwatchView?
+    private var timer: Timer?
     
     private func view(forState: State) -> UIView {
         let frame = CGRect(x: 0, y: view.frame.height/3*1, width: view.frame.width, height: view.frame.height/3*2)
@@ -64,26 +69,48 @@ class TimeRecordingViewController: UIViewController {
         stopwatch.frame = frame
         return stopwatch
     }
+    
+    private func createTimer() -> Timer {
+        let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_) in
+            self.currentSeconds = Int(self.startDate.timeIntervalSinceNow) * -1
+            self.stopwatchView?.seconds = self.currentSeconds + self.savedSeconds
+        }
+        return timer
+    }
+    
+    private func startTimer() {
+        startDate = Date()
+        timer = createTimer()
+    }
+    
+    private func stopTimer() {
+        timer?.invalidate()
+    }
 }
 
 extension TimeRecordingViewController: StartTimeRecordingDelegate {
     func startTimeRecording() {
         replace(oldStateWith: .running)
+        startTimer()
     }
 }
 
 extension TimeRecordingViewController: PauseAndStopTimeRecordingDelegate {
     func pauseTimeRecording() {
         replace(oldStateWith: .pause)
+        savedSeconds += currentSeconds
+        stopTimer()
     }
     
     func stopTimeRecording() {
         replace(oldStateWith: .start)
+        print(savedSeconds + currentSeconds)
     }
 }
 
 extension TimeRecordingViewController: ContinueTimeRecordingDelegate {
     func continueTimeRecording() {
         replace(oldStateWith: .running)
+        startTimer()
     }
 }
