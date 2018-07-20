@@ -12,6 +12,9 @@ class StartButtonView: UIView {
 
     weak var delegate: StartTimeRecordingDelegate?
 
+    @IBAction func start(_ sender: Any) {
+        delegate?.startTimeRecording()
+    }
 }
 
 protocol StartTimeRecordingDelegate: class {

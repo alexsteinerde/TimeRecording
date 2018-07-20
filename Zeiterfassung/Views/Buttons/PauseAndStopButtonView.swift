@@ -12,6 +12,13 @@ class PauseAndStopButtonView: UIView {
 
     weak var delegate: PauseAndStopTimeRecordingDelegate?
 
+    @IBAction func pause(_ sender: Any) {
+        delegate?.pauseTimeRecording()
+    }
+    
+    @IBAction func stop(_ sender: Any) {
+        delegate?.stopTimeRecording()
+    }
 }
 
 protocol PauseAndStopTimeRecordingDelegate: class {
