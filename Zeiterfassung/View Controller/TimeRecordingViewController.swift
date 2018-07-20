@@ -36,7 +36,7 @@ class TimeRecordingViewController: UIViewController {
     private func view(forState: State) -> UIView {
         let frame = CGRect(x: 0, y: view.frame.height/3*1, width: view.frame.width, height: view.frame.height/3*2)
         
-        let viewType = state.current.view
+        let viewType = forState.view
         let stateView = viewType.instanceFromNib() as! TimeRecordingButtonView
         stateView.delegate = self
         stateView.frame = frame
@@ -68,22 +68,22 @@ class TimeRecordingViewController: UIViewController {
 
 extension TimeRecordingViewController: StartTimeRecordingDelegate {
     func startTimeRecording() {
-        
+        replace(oldStateWith: .running)
     }
 }
 
 extension TimeRecordingViewController: PauseAndStopTimeRecordingDelegate {
     func pauseTimeRecording() {
-        
+        replace(oldStateWith: .pause)
     }
     
     func stopTimeRecording() {
-        
+        replace(oldStateWith: .start)
     }
 }
 
 extension TimeRecordingViewController: ContinueTimeRecordingDelegate {
     func continueTimeRecording() {
-        
+        replace(oldStateWith: .running)
     }
 }
