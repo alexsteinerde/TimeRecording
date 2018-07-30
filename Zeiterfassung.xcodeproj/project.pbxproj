@@ -13,6 +13,12 @@
 		FA283F6D20F8D7BB009BF7EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA283F6C20F8D7BB009BF7EC /* Assets.xcassets */; };
 		FA283F7520F8D981009BF7EC /* MonthSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA283F7420F8D981009BF7EC /* MonthSelectionView.swift */; };
 		FA283F7720F8D98A009BF7EC /* MonthSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA283F7620F8D98A009BF7EC /* MonthSelectionView.xib */; };
+		FA2B3DF8210F1F74004F530C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA2B3DF6210F1F74004F530C /* Model.xcdatamodeld */; };
+		FA2B3E1D210F21CE004F530C /* TimeRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B3E19210F21CE004F530C /* TimeRecord+CoreDataClass.swift */; };
+		FA2B3E1E210F21CE004F530C /* TimeRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B3E1A210F21CE004F530C /* TimeRecord+CoreDataProperties.swift */; };
+		FA2B3E1F210F21CE004F530C /* BreakRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B3E1B210F21CE004F530C /* BreakRecord+CoreDataClass.swift */; };
+		FA2B3E20210F21CE004F530C /* BreakRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B3E1C210F21CE004F530C /* BreakRecord+CoreDataProperties.swift */; };
+		FA2B3E23210F228E004F530C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B3E22210F228E004F530C /* CoreDataManager.swift */; };
 		FA3A74E72100B16600F11457 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A74E62100B16600F11457 /* StartButtonView.swift */; };
 		FA3A74E92100B18500F11457 /* StartButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3A74E82100B18500F11457 /* StartButtonView.xib */; };
 		FA3A74EB2100B1C200F11457 /* PauseAndStopButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3A74EA2100B1C200F11457 /* PauseAndStopButtonView.xib */; };
@@ -46,6 +52,12 @@
 		FA283F6C20F8D7BB009BF7EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA283F7420F8D981009BF7EC /* MonthSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSelectionView.swift; sourceTree = "<group>"; };
 		FA283F7620F8D98A009BF7EC /* MonthSelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonthSelectionView.xib; sourceTree = "<group>"; };
+		FA2B3DF7210F1F74004F530C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		FA2B3E19210F21CE004F530C /* TimeRecord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeRecord+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FA2B3E1A210F21CE004F530C /* TimeRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FA2B3E1B210F21CE004F530C /* BreakRecord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreakRecord+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FA2B3E1C210F21CE004F530C /* BreakRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreakRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FA2B3E22210F228E004F530C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		FA3A74E62100B16600F11457 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
 		FA3A74E82100B18500F11457 /* StartButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartButtonView.xib; sourceTree = "<group>"; };
 		FA3A74EA2100B1C200F11457 /* PauseAndStopButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PauseAndStopButtonView.xib; sourceTree = "<group>"; };
@@ -103,6 +115,7 @@
 			children = (
 				FA283F5920F8D76A009BF7EC /* AppDelegate.swift */,
 				FA283F5D20F8D76A009BF7EC /* Main.storyboard */,
+				FA2B3E21210F227E004F530C /* Managers */,
 				FA283F7220F8D816009BF7EC /* Modell */,
 				FA283F7120F8D80F009BF7EC /* View Controller */,
 				FA283F7320F8D951009BF7EC /* Views */,
@@ -133,6 +146,11 @@
 		FA283F7220F8D816009BF7EC /* Modell */ = {
 			isa = PBXGroup;
 			children = (
+				FA2B3E19210F21CE004F530C /* TimeRecord+CoreDataClass.swift */,
+				FA2B3E1A210F21CE004F530C /* TimeRecord+CoreDataProperties.swift */,
+				FA2B3E1B210F21CE004F530C /* BreakRecord+CoreDataClass.swift */,
+				FA2B3E1C210F21CE004F530C /* BreakRecord+CoreDataProperties.swift */,
+				FA2B3DF6210F1F74004F530C /* Model.xcdatamodeld */,
 			);
 			path = Modell;
 			sourceTree = "<group>";
@@ -147,6 +165,14 @@
 				FA3A74FA2100B63400F11457 /* StopwatchView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FA2B3E21210F227E004F530C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FA2B3E22210F228E004F530C /* CoreDataManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		FA3A74E52100B13D00F11457 /* Buttons */ = {
@@ -280,13 +306,19 @@
 			files = (
 				FA3A74E72100B16600F11457 /* StartButtonView.swift in Sources */,
 				FA3A74F62100B52C00F11457 /* TimeRecordingViewController.swift in Sources */,
+				FA2B3E20210F21CE004F530C /* BreakRecord+CoreDataProperties.swift in Sources */,
+				FA2B3E23210F228E004F530C /* CoreDataManager.swift in Sources */,
 				FA3A74F32100B41000F11457 /* Extensions.swift in Sources */,
 				FA3A74EF2100B1DE00F11457 /* PauseAndStopButtonView.swift in Sources */,
 				FA283F7520F8D981009BF7EC /* MonthSelectionView.swift in Sources */,
+				FA2B3E1F210F21CE004F530C /* BreakRecord+CoreDataClass.swift in Sources */,
 				FA283F5A20F8D76A009BF7EC /* AppDelegate.swift in Sources */,
 				FA3A74F92100B62B00F11457 /* StopwatchView.swift in Sources */,
+				FA2B3DF8210F1F74004F530C /* Model.xcdatamodeld in Sources */,
+				FA2B3E1D210F21CE004F530C /* TimeRecord+CoreDataClass.swift in Sources */,
 				FA3A750B2101DD9C00F11457 /* TimeRecordingButtonView.swift in Sources */,
 				FA3A74F12100B1E500F11457 /* ContinueButtonView.swift in Sources */,
+				FA2B3E1E210F21CE004F530C /* TimeRecord+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +583,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FA2B3DF6210F1F74004F530C /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FA2B3DF7210F1F74004F530C /* Model.xcdatamodel */,
+			);
+			currentVersion = FA2B3DF7210F1F74004F530C /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FA283F4E20F8D76A009BF7EC /* Project object */;
 }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BreakRecord" representedClassName="BreakRecord" syncable="YES">
+        <attribute name="end" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="start" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="timeRecord" maxCount="1" deletionRule="Nullify" destinationEntity="TimeRecord" inverseName="breaks" inverseEntity="TimeRecord" syncable="YES"/>
+    </entity>
+    <entity name="TimeRecord" representedClassName="TimeRecord" syncable="YES">
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="end" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="start" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="breaks" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="BreakRecord" inverseName="timeRecord" inverseEntity="BreakRecord" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="TimeRecord" positionX="79" positionY="-18" width="128" height="103"/>
+        <element name="BreakRecord" positionX="277" positionY="-9" width="128" height="88"/>
+    </elements>
+</model>
