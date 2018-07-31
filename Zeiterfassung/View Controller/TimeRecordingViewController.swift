@@ -57,10 +57,26 @@ class TimeRecordingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if TimeRecordingManager.isTodaysTimerRunning {
+            if let currentStartDate = TimeRecordingManager.lastStartDate, let savedSeconds = TimeRecordingManager.recordedSecondsToday {
+                self.startDate = currentStartDate
+                self.savedSeconds = savedSeconds
+                self.currentSeconds = Int(self.startDate.timeIntervalSinceNow) * -1
+                state.current = .running
+                resumeTimer()
+            } else if let savedSeconds = TimeRecordingManager.recordedSecondsToday {
+                self.savedSeconds = savedSeconds
+                state.current = .pause
+            }
+        }
+
         replace(oldStateWith: state.current)
         let stopwatchView = createStopwatchView()
         self.stopwatchView = stopwatchView
         view.addSubview(stopwatchView)
+        if TimeRecordingManager.isTodaysTimerRunning {
+            self.stopwatchView?.seconds = self.currentSeconds + self.savedSeconds
+        }
     }
     
     private func createStopwatchView() -> StopwatchView {
@@ -83,6 +99,10 @@ class TimeRecordingViewController: UIViewController {
         timer = createTimer()
     }
     
+    private func resumeTimer() {
+        timer = createTimer()
+    }
+    
     private func stopTimer() {
         timer?.invalidate()
     }
@@ -92,6 +112,7 @@ extension TimeRecordingViewController: StartTimeRecordingDelegate {
     func startTimeRecording() {
         replace(oldStateWith: .running)
         startTimer()
+        TimeRecordingManager.start()
     }
 }
 
@@ -100,11 +121,13 @@ extension TimeRecordingViewController: PauseAndStopTimeRecordingDelegate {
         replace(oldStateWith: .pause)
         savedSeconds += currentSeconds
         stopTimer()
+        TimeRecordingManager.pause()
     }
     
     func stopTimeRecording() {
         replace(oldStateWith: .start)
         print(savedSeconds + currentSeconds)
+        TimeRecordingManager.stop()
     }
 }
 
@@ -112,5 +135,6 @@ extension TimeRecordingViewController: ContinueTimeRecordingDelegate {
     func continueTimeRecording() {
         replace(oldStateWith: .running)
         startTimer()
+        TimeRecordingManager.resume()
     }
 }
