@@ -17,9 +17,9 @@ extension TimeRecord {
         return NSFetchRequest<TimeRecord>(entityName: "TimeRecord")
     }
 
-    @NSManaged public var start: NSDate?
+    @NSManaged public var start: NSDate
     @NSManaged public var end: NSDate?
-    @NSManaged public var date: NSDate?
+    @NSManaged public var date: NSDate
     @NSManaged public var breaks: NSOrderedSet?
 
 }

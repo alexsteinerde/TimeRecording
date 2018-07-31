@@ -17,8 +17,8 @@ extension BreakRecord {
         return NSFetchRequest<BreakRecord>(entityName: "BreakRecord")
     }
 
-    @NSManaged public var start: NSDate?
+    @NSManaged public var start: NSDate
     @NSManaged public var end: NSDate?
-    @NSManaged public var timeRecord: TimeRecord?
+    @NSManaged public var timeRecord: TimeRecord
 
 }
