@@ -128,6 +128,7 @@ extension TimeRecordingViewController: PauseAndStopTimeRecordingDelegate {
         replace(oldStateWith: .start)
         print(savedSeconds + currentSeconds)
         TimeRecordingManager.stop()
+        stopTimer()
     }
 }
 
