@@ -15,8 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let coreDataManager = CoreDataManager(modelName: "Model")
-        print(coreDataManager.managedObjectContext)
         // Override point for customization after application launch.
         return true
     }

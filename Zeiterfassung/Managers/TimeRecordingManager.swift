@@ -9,6 +9,8 @@
 import Foundation
 
 class TimeRecordingManager {
+    private static var coreDataManager = CoreDataManager(modelName: "Model")
+    
     class func start() {
         
     }
