@@ -52,11 +52,11 @@
         <!--Übersicht-->
         <scene sceneID="wWn-Gn-ffs">
             <objects>
-                <tableViewController id="Pkn-4h-h7S" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="sTy-t5-EPj">
+                <tableViewController id="Pkn-4h-h7S" customClass="HistoryTableViewController" customModule="Zeiterfassung" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sTy-t5-EPj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <connections>
                             <outlet property="dataSource" destination="Pkn-4h-h7S" id="YAz-wl-W4E"/>
                             <outlet property="delegate" destination="Pkn-4h-h7S" id="vhq-jC-fGh"/>
@@ -64,7 +64,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Übersicht" id="rb1-3x-3Op">
                         <barButtonItem key="leftBarButtonItem" title="Filtern" id="4Z1-XC-F6n"/>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Ej2-IY-cbI"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Ej2-IY-cbI">
+                            <connections>
+                                <action selector="done:" destination="Pkn-4h-h7S" id="Oq4-jj-U90"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gR-v5-9ox" userLabel="First Responder" sceneMemberID="firstResponder"/>

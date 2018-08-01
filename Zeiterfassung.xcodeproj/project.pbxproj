@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA14BB442111E2F000A3997B /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA14BB432111E2F000A3997B /* HistoryTableViewController.swift */; };
+		FA14BB4A2111E33100A3997B /* RecordHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA14BB482111E33100A3997B /* RecordHistoryTableViewCell.swift */; };
+		FA14BB4B2111E33100A3997B /* RecordHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA14BB492111E33100A3997B /* RecordHistoryTableViewCell.xib */; };
 		FA283F5A20F8D76A009BF7EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA283F5920F8D76A009BF7EC /* AppDelegate.swift */; };
 		FA283F5F20F8D76A009BF7EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA283F5D20F8D76A009BF7EC /* Main.storyboard */; };
 		FA283F6420F8D76B009BF7EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA283F6220F8D76B009BF7EC /* LaunchScreen.storyboard */; };
@@ -45,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA14BB432111E2F000A3997B /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		FA14BB482111E33100A3997B /* RecordHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		FA14BB492111E33100A3997B /* RecordHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		FA283F5620F8D76A009BF7EC /* Zeiterfassung.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zeiterfassung.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA283F5920F8D76A009BF7EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA283F5E20F8D76A009BF7EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA14BB452111E30300A3997B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FA14BB482111E33100A3997B /* RecordHistoryTableViewCell.swift */,
+				FA14BB492111E33100A3997B /* RecordHistoryTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		FA283F4D20F8D76A009BF7EC = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				FA3A74F42100B52C00F11457 /* TimeRecordingViewController.swift */,
+				FA14BB432111E2F000A3997B /* HistoryTableViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -160,6 +176,7 @@
 		FA283F7320F8D951009BF7EC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA14BB452111E30300A3997B /* Cells */,
 				FA3A74E52100B13D00F11457 /* Buttons */,
 				FA283F7420F8D981009BF7EC /* MonthSelectionView.swift */,
 				FA283F7620F8D98A009BF7EC /* MonthSelectionView.xib */,
@@ -282,6 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA14BB4B2111E33100A3997B /* RecordHistoryTableViewCell.xib in Resources */,
 				FA283F6420F8D76B009BF7EC /* LaunchScreen.storyboard in Resources */,
 				FA3A74FB2100B63400F11457 /* StopwatchView.xib in Resources */,
 				FA283F6D20F8D7BB009BF7EC /* Assets.xcassets in Resources */,
@@ -307,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA14BB4A2111E33100A3997B /* RecordHistoryTableViewCell.swift in Sources */,
 				FA3A74E72100B16600F11457 /* StartButtonView.swift in Sources */,
 				FA3A74F62100B52C00F11457 /* TimeRecordingViewController.swift in Sources */,
 				FA2B3E20210F21CE004F530C /* BreakRecord+CoreDataProperties.swift in Sources */,
@@ -320,6 +339,7 @@
 				FA2B3DF8210F1F74004F530C /* Model.xcdatamodeld in Sources */,
 				FA2B3E1D210F21CE004F530C /* TimeRecord+CoreDataClass.swift in Sources */,
 				FA2B3E2521103CA6004F530C /* TimeRecordingManager.swift in Sources */,
+				FA14BB442111E2F000A3997B /* HistoryTableViewController.swift in Sources */,
 				FA3A750B2101DD9C00F11457 /* TimeRecordingButtonView.swift in Sources */,
 				FA3A74F12100B1E500F11457 /* ContinueButtonView.swift in Sources */,
 				FA2B3E1E210F21CE004F530C /* TimeRecord+CoreDataProperties.swift in Sources */,
