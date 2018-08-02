@@ -14,7 +14,7 @@ class HistoryTableViewController: UITableViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    var records = [TimeRecordUIModel]()
+    var records = [SimpleTimeRecord]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

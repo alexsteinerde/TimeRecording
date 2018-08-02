@@ -87,19 +87,19 @@ class TimeRecordingManager {
         return Int(secondsSinceStart - pauseTime - 1)
     }
     
-    class var allRecords: [TimeRecordUIModel] {
+    class var allRecords: [SimpleTimeRecord] {
         let fetch: NSFetchRequest<TimeRecord> = TimeRecord.fetchRequest()
         let records = (try? coreDataManager.managedObjectContext.fetch(fetch))
-        return (records ?? []).map({ TimeRecordUIModel(fromTimeRecord: $0) }).sorted(by: { $0.date > $1.date })
+        return (records ?? []).map({ SimpleTimeRecord(fromTimeRecord: $0) }).sorted(by: { $0.date > $1.date })
     }
     
-    class func delete(record: TimeRecordUIModel) {
+    class func delete(record: SimpleTimeRecord) {
         coreDataManager.managedObjectContext.delete(record.record)
         try? coreDataManager.managedObjectContext.save()
     }
 }
 
-struct TimeRecordUIModel {
+struct SimpleTimeRecord {
     var date: Date
     var startDate: String
     var endDate: String
@@ -107,7 +107,7 @@ struct TimeRecordUIModel {
     fileprivate var record: TimeRecord
 }
 
-extension TimeRecordUIModel {
+extension SimpleTimeRecord {
     init(fromTimeRecord record: TimeRecord) {
         let formatter = DateFormatter()
         formatter.dateStyle = .none

@@ -35,6 +35,7 @@
 		FA3A74FB2100B63400F11457 /* StopwatchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3A74FA2100B63400F11457 /* StopwatchView.xib */; };
 		FA3A75032100D3DA00F11457 /* ZeiterfassungTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A75022100D3DA00F11457 /* ZeiterfassungTests.swift */; };
 		FA3A750B2101DD9C00F11457 /* TimeRecordingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A750A2101DD9C00F11457 /* TimeRecordingButtonView.swift */; };
+		FA511BA121122A99009C54E4 /* ExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA511BA021122A99009C54E4 /* ExportManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		FA3A75022100D3DA00F11457 /* ZeiterfassungTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeiterfassungTests.swift; sourceTree = "<group>"; };
 		FA3A75042100D3DA00F11457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA3A750A2101DD9C00F11457 /* TimeRecordingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRecordingButtonView.swift; sourceTree = "<group>"; };
+		FA511BA021122A99009C54E4 /* ExportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 			children = (
 				FA2B3E22210F228E004F530C /* CoreDataManager.swift */,
 				FA2B3E2421103CA6004F530C /* TimeRecordingManager.swift */,
+				FA511BA021122A99009C54E4 /* ExportManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				FA3A74EF2100B1DE00F11457 /* PauseAndStopButtonView.swift in Sources */,
 				FA283F7520F8D981009BF7EC /* MonthSelectionView.swift in Sources */,
 				FA2B3E1F210F21CE004F530C /* BreakRecord+CoreDataClass.swift in Sources */,
+				FA511BA121122A99009C54E4 /* ExportManager.swift in Sources */,
 				FA283F5A20F8D76A009BF7EC /* AppDelegate.swift in Sources */,
 				FA3A74F92100B62B00F11457 /* StopwatchView.swift in Sources */,
 				FA2B3DF8210F1F74004F530C /* Model.xcdatamodeld in Sources */,

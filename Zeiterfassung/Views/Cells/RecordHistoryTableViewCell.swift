@@ -15,7 +15,7 @@ class RecordHistoryTableViewCell: UITableViewCell {
     @IBOutlet weak var endDateLabel: UILabel!
     @IBOutlet weak var pauseTimeLabel: UILabel!
     
-    fileprivate func load(_ record: TimeRecordUIModel) {
+    fileprivate func load(_ record: SimpleTimeRecord) {
         startDateLabel.text = record.startDate
         endDateLabel.text = record.endDate
         pauseTimeLabel.text = "\(record.pauseSeconds) min"
@@ -24,7 +24,7 @@ class RecordHistoryTableViewCell: UITableViewCell {
         dayLabel.text = formatter.string(from: record.date)
     }
     
-    var record: TimeRecordUIModel? {
+    var record: SimpleTimeRecord? {
         didSet {
             guard let record = record else { return }
             load(record)

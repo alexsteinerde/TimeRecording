@@ -21,7 +21,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Zeiterfassung" id="Iv9-HB-GHa">
-                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="action" id="ORL-Qy-6Lg"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="action" id="ORL-Qy-6Lg">
+                            <connections>
+                                <action selector="exportDidPressed:" destination="BYZ-38-t0r" id="2Ln-HU-U23"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Historie" id="Aev-9L-pGB">
                             <connections>
                                 <segue destination="yu5-Oy-cDi" kind="showDetail" id="EnL-Td-LLu"/>

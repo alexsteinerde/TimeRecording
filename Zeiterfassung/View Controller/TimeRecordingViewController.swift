@@ -9,7 +9,15 @@
 import UIKit
 
 class TimeRecordingViewController: UIViewController {
-
+    
+    @IBAction func exportDidPressed(_ sender: Any) {
+        let content = ExportManager.csv(forRecords: TimeRecordingManager.allRecords)
+        let url = ExportManager.save(content: content, toFilename: "history.csv")
+        let vc = UIActivityViewController(activityItems: [url], applicationActivities: [])
+        
+        self.present(vc, animated: true)
+    }
+    
     enum State {
         case start
         case running
