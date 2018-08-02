@@ -15,8 +15,52 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MonthSelectionView" customModule="Zeiterfassung" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="GOz-38-eJj">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="599"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="AzX-5h-dZE"/>
+                        <outlet property="delegate" destination="-1" id="LmV-XF-BjL"/>
+                    </connections>
+                </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="MvP-9h-uar">
+                    <rect key="frame" x="77.5" y="615" width="219" height="36"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMZ-M6-XJT">
+                            <rect key="frame" x="0.0" y="0.0" width="87" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="Schließen"/>
+                            <connections>
+                                <action selector="close:" destination="iN0-l3-epB" eventType="touchUpInside" id="cb3-F7-Nfv"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmN-Cn-0r2">
+                            <rect key="frame" x="103" y="0.0" width="116" height="36"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <state key="normal" title="Deaktivieren"/>
+                            <connections>
+                                <action selector="deactivateFilter:" destination="iN0-l3-epB" eventType="touchUpInside" id="zzD-oC-d6G"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="GOz-38-eJj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3R6-Px-4FE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="MvP-9h-uar" secondAttribute="bottom" constant="16" id="IkV-kB-7Qr"/>
+                <constraint firstItem="GOz-38-eJj" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Sdh-7w-KfI"/>
+                <constraint firstItem="MvP-9h-uar" firstAttribute="top" secondItem="GOz-38-eJj" secondAttribute="bottom" constant="16" id="YEu-1X-dOp"/>
+                <constraint firstItem="MvP-9h-uar" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="l5G-Oe-EVB"/>
+                <constraint firstItem="GOz-38-eJj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mrk-sX-Uj9"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="deactivateButton" destination="MvP-9h-uar" id="gOS-7Q-wSD"/>
+                <outlet property="tableView" destination="GOz-38-eJj" id="FaA-Od-frF"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
 </document>

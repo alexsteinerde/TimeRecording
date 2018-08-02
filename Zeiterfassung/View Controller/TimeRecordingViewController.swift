@@ -11,11 +11,23 @@ import UIKit
 class TimeRecordingViewController: UIViewController {
     
     @IBAction func exportDidPressed(_ sender: Any) {
-        let content = ExportManager.csv(forRecords: TimeRecordingManager.allRecords)
-        let url = ExportManager.save(content: content, toFilename: "history.csv")
-        let vc = UIActivityViewController(activityItems: [url], applicationActivities: [])
+        guard !self.view.subviews.contains(where: { $0 is MonthSelectionView}) else { return }
+        let view = MonthSelectionView.instanceFromNib() as! MonthSelectionView
+        view.setup()
+        view.deactivateButton.isHidden = false
+        view.selectedFilterAction = { filter in
+            view.closeAction?()
+            guard let filter = filter else { return }
+            let content = ExportManager.csv(forRecords: filter.filter(records: TimeRecordingManager.allRecords))
+            let url = ExportManager.save(content: content, toFilename: filter.title+".csv")
+            let vc = UIActivityViewController(activityItems: [url], applicationActivities: [])
+            
+            self.present(vc, animated: true)
+        }
+        view.frame = CGRect(x: 0, y: (view.frame.height)/2, width: view.frame.width, height: view.frame.height/2)
         
-        self.present(vc, animated: true)
+        self.view.addSubview(view)
+        self.view.bringSubview(toFront: view)
     }
     
     enum State {
