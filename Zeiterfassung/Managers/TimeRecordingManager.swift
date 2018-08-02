@@ -104,6 +104,7 @@ struct SimpleTimeRecord {
     var startDate: String
     var endDate: String
     var pauseSeconds: Int
+    var totalTime: String
     fileprivate var record: TimeRecord
 }
 
@@ -118,5 +119,7 @@ extension SimpleTimeRecord {
         let seconds = (record.breaks?.array as? [BreakRecord])?.compactMap({ $0.end?.timeIntervalSince($0.start) }) ?? [0.0]
         self.pauseSeconds = Int(seconds.reduce(0, +))
         self.record = record
+        let totalSeconds = Int((record.end ?? Date()).timeIntervalSince(record.start)) - self.pauseSeconds
+        self.totalTime = StopwatchView.textForLabel(fromSeconds: totalSeconds)
     }
 }

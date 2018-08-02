@@ -14,6 +14,7 @@ class RecordHistoryTableViewCell: UITableViewCell {
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var endDateLabel: UILabel!
     @IBOutlet weak var pauseTimeLabel: UILabel!
+    @IBOutlet weak var totalSumLabel: UILabel!
     
     fileprivate func load(_ record: SimpleTimeRecord) {
         startDateLabel.text = record.startDate
@@ -21,7 +22,9 @@ class RecordHistoryTableViewCell: UITableViewCell {
         pauseTimeLabel.text = "\(record.pauseSeconds) min"
         let formatter = DateFormatter()
         formatter.dateStyle = .full
+        totalSumLabel.text = record.totalTime
         dayLabel.text = formatter.string(from: record.date)
+        
     }
     
     var record: SimpleTimeRecord? {

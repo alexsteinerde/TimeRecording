@@ -13,7 +13,7 @@ class ExportManager {
     static var lineBreak = "\n"
     static func csv(forRecords records: [SimpleTimeRecord]) -> String {
         var file = String()
-        let header = "Datum"+seperator+"Startzeit"+seperator+"Endzeit"+seperator+"Pausenzeit"
+        let header = "Datum"+seperator+"Startzeit"+seperator+"Endzeit"+seperator+"Pausenzeit"+seperator+"Summe"
         
         let rows = records.map({ row(forRecord: $0) })
         
@@ -27,7 +27,7 @@ class ExportManager {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
         let date = formatter.string(from: record.date)
-        let components: [String] = [date, record.startDate, record.endDate, String(record.pauseSeconds)]
+        let components: [String] = [date, record.startDate, record.endDate, String(record.pauseSeconds), String(record.totalTime)]
         return components.joined(separator: seperator)
     }
     
